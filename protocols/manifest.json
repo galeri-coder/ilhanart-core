@@ -1,3 +1,4 @@
+// FILE: protocols/manifest.json
 {
   "name": "ilhanart-protocols",
   "schema_version": "1.0.0",
@@ -8,6 +9,17 @@
       "title": "[PoArt] Proof of Art",
       "active_version": "1.0.0",
       "canonical_path": "/protocols/poart/",
+      "registry": {
+        "required_registry_entries_min": 1,
+        "match": {
+          "token_id_prefixes": ["WP-", "POART-"],
+          "work_categories": ["Official Protocol"]
+        },
+        "allowed_evidence_prefixes": [
+          "https://github.com/galeri-coder/ilhanart-core",
+          "/protocols/poart/"
+        ]
+      },
       "versions": [
         {
           "version": "1.0.0",
@@ -24,6 +36,17 @@
       "title": "[F.P.P.] Foundational Pillars Protocol",
       "active_version": "1.0.0",
       "canonical_path": "/protocols/fpp/",
+      "registry": {
+        "required_registry_entries_min": 1,
+        "match": {
+          "token_id_prefixes": ["FPP-"],
+          "work_categories": ["Governance", "Official Protocol"]
+        },
+        "allowed_evidence_prefixes": [
+          "https://github.com/galeri-coder/ilhanart-core",
+          "/protocols/fpp/"
+        ]
+      },
       "versions": [
         {
           "version": "1.0.0",
