@@ -1,0 +1,39 @@
+{
+  "name": "ilhanart-protocols",
+  "schema_version": "1.0.0",
+  "last_updated": "2026-01-06",
+  "protocols": [
+    {
+      "id": "poart",
+      "title": "[PoArt] Proof of Art",
+      "active_version": "1.0.0",
+      "canonical_path": "/protocols/poart/",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "status": "active",
+          "spec_path": "/protocols/poart/v1/spec.md",
+          "params_path": "/protocols/poart/v1/params.json",
+          "changelog_path": "/protocols/poart/v1/changelog.md",
+          "released_at": "2026-01-06"
+        }
+      ]
+    },
+    {
+      "id": "fpp",
+      "title": "[F.P.P.] Foundational Pillars Protocol",
+      "active_version": "1.0.0",
+      "canonical_path": "/protocols/fpp/",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "status": "active",
+          "spec_path": "/protocols/fpp/v1/spec.md",
+          "params_path": "/protocols/fpp/v1/params.json",
+          "changelog_path": "/protocols/fpp/v1/changelog.md",
+          "released_at": "2026-01-06"
+        }
+      ]
+    }
+  ]
+}
