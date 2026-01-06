@@ -1,0 +1,38 @@
+[
+  {
+    "artist": "Deniz İlhan",
+    "artist_handle": "@galeri-coder",
+    "work_title": "İlhanArt WhitePaper V1.0",
+    "work_category": "Official Protocol",
+    "verification_status": "verified",
+    "chain": "—",
+    "token_id": "WP-V1-SIG",
+    "evidence_pack": "https://github.com/galeri-coder/ilhanart-core/blob/main/README.md",
+    "last_renewal": "2026-01-06",
+    "registered_at": "2026-01-06"
+  },
+  {
+    "artist": "Ali Naki İlhan",
+    "artist_handle": "@Galerilhan",
+    "work_title": "İlhan Art Gallery (Istanbul)",
+    "work_category": "Art Ecosystem",
+    "verification_status": "verified",
+    "chain": "Solana",
+    "token_id": "GALLERY-MAIN-001",
+    "evidence_pack": "https://www.youtube.com/@%C4%B0lhanARTLive",
+    "last_renewal": "2026-03-18",
+    "registered_at": "2025-01-15"
+  },
+  {
+    "artist": "Foundational Pillars",
+    "artist_handle": "@FPP-Protocol",
+    "work_title": "Liyakat Anayasası (FPP)",
+    "work_category": "Governance",
+    "verification_status": "verified",
+    "chain": "—",
+    "token_id": "FPP-V1-CORE",
+    "evidence_pack": "https://github.com/galeri-coder/ilhanart-core",
+    "last_renewal": "2026-01-06",
+    "registered_at": "2026-01-06"
+  }
+]
