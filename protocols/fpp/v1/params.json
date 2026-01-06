@@ -1,0 +1,27 @@
+{
+  "protocol": "FPP",
+  "version": "1.0.0",
+  "released_at": "2026-01-06",
+  "twab": {
+    "twab_window_days": 365,
+    "sample_period_hours": 24,
+    "notes": "Uygulama snapshot'ları bu periyotla alıp TWAB hesaplar."
+  },
+  "score": {
+    "formula": "log10(twab + 1)",
+    "log_base": 10
+  },
+  "security": {
+    "sybil_resistance": true,
+    "flash_loan_resistance": true,
+    "min_account_age_days": 30
+  },
+  "vault": {
+    "epoch_years": 10,
+    "notes": "Epoch kilitleri uygulama katmanında uygulanır."
+  },
+  "governance": {
+    "enabled": true,
+    "notes": "Quorum/oy gücü fonksiyonu uygulama katmanında tanımlanır."
+  }
+}
