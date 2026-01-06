@@ -1,0 +1,30 @@
+{
+  "protocol": "PoArt",
+  "version": "1.0.0",
+  "released_at": "2026-01-06",
+  "verification": {
+    "cold_wallet_min_days": 365,
+    "evidence_pack_required": true
+  },
+  "renewal": {
+    "renewal_days": 365,
+    "grace_period_days": 30
+  },
+  "veto": {
+    "enabled": true,
+    "veto_threshold": 0.4,
+    "veto_window_days": 14
+  },
+  "evidence_pack": {
+    "required_items": [
+      "live_stream_url",
+      "timelapse_url",
+      "work_log_url"
+    ],
+    "notes": {
+      "live_stream_url": "Canlı yayın kanıtı linki (playlist/channel/video).",
+      "timelapse_url": "Üretim sürecini kapsayan timelapse linki/dosyası.",
+      "work_log_url": "Tarih-saat damgalı çalışma logu (md/txt/pdf)."
+    }
+  }
+}
