@@ -16,6 +16,9 @@
         },
         "allowed_evidence_prefixes": [
           "https://github.com/galeri-coder/ilhanart-core",
+          "https://raw.githubusercontent.com/galeri-coder/ilhanart-core",
+          "https://galeri-coder.github.io/ilhanart-core",
+          "https://www.ilhanart.org/poart",
           "/protocols/poart/"
         ]
       },
@@ -43,6 +46,9 @@
         },
         "allowed_evidence_prefixes": [
           "https://github.com/galeri-coder/ilhanart-core",
+          "https://raw.githubusercontent.com/galeri-coder/ilhanart-core",
+          "https://galeri-coder.github.io/ilhanart-core",
+          "https://www.ilhanart.org/fpp",
           "/protocols/fpp/"
         ]
       },
