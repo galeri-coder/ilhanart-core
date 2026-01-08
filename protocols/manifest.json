@@ -1,26 +1,25 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/galeri-coder/ilhanart-core/main/protocols/poart-identity-v1.json",
-  "title": "[PoArt] Identity Manifest Schema",
-  "description": "Official schema for İlhan Art Proof of Art Identity Manifests",
-  "type": "object",
-  "required": ["manifest", "identity", "asset_data", "philosophy", "official_links"],
-  "properties": {
-    "manifest": { "type": "object" },
-    "identity": { "type": "object" },
-    "asset_data": { 
-      "type": "object",
-      "properties": {
-        "fingerprints": {
-          "type": "object",
-          "properties": {
-            "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
-            "sha512": { "type": "string", "pattern": "^[a-f0-9]{128}$" }
-          }
-        }
-      }
-    },
-    "philosophy": { "type": "object" },
-    "official_links": { "type": "object" }
+  "id": "ilhanart-core",
+  "last_updated": "2026-01-08T15:20:00Z",
+  "protocols": [
+    {
+      "id": "poart",
+      "name": "[PoArt] Proof of Art",
+      "active_version": "1.0.0",
+      "schema_url": "https://raw.githubusercontent.com/galeri-coder/ilhanart-core/main/protocols/poart-identity-v1.json"
+    }
+  ],
+  "allowed_evidence_prefixes": [
+    "https://www.ilhanart.org",
+    "https://ilhanart.org",
+    "https://github.com/galeri-coder",
+    "https://www.youtube.com/@İlhanARTLive",
+    "https://pump.fun"
+  ],
+  "institutional_info": {
+    "name": "Ilhan Art Gallery",
+    "official_registry": "https://www.ilhanart.org/public-registry",
+    "archive_vision": "2025-3000",
+    "location": "Besiktas / Istanbul"
   }
 }
