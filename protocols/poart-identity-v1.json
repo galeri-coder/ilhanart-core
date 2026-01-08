@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/galeri-coder/ilhanart-core/main/protocols/poart-identity-v1.json",
+  "title": "[PoArt] Identity Manifest Schema",
+  "description": "İlhan Art Proof of Art (PoArt) protokolü için resmi kimlik ve noter şeması.",
+  "type": "object",
+  "required": ["manifest", "identity", "asset_data", "philosophy", "official_links"],
+  "properties": {
+    "manifest": {
+      "type": "object",
+      "required": ["protocol", "version", "status"],
+      "properties": {
+        "protocol": { "type": "string", "const": "[PoArt] Proof of Art" },
+        "version": { "type": "string" },
+        "status": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" }
+      }
+    },
+    "identity": {
+      "type": "object",
+      "required": ["issuer", "archive_vision"],
+      "properties": {
+        "issuer": { "type": "string" },
+        "location": { "type": "string" },
+        "archive_vision": { "type": "string" },
+        "certificate_id": { "type": "string" }
+      }
+    },
+    "asset_data": {
+      "type": "object",
+      "required": ["title", "fingerprints"],
+      "properties": {
+        "title": { "type": "string" },
+        "fingerprints": {
+          "type": "object",
+          "required": ["sha256", "sha512"],
+          "properties": {
+            "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+            "sha512": { "type": "string", "pattern": "^[a-f0-9]{128}$" }
+          }
+        }
+      }
+    },
+    "philosophy": {
+      "type": "object",
+      "properties": {
+        "vision": { "type": "string" },
+        "motto": { "type": "string" }
+      }
+    },
+    "official_links": {
+      "type": "object",
+      "properties": {
+        "registry": { "type": "string", "format": "uri" },
+        "evidence_pack": { "type": "string", "format": "uri" }
+      }
+    }
+  }
+}
