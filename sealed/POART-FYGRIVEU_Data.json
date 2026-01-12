@@ -1,0 +1,13 @@
+{
+  "cert_id": "POART-FYGRIVEU",
+  "title": "SQLv1.0",
+  "creator": "Denizİlhan",
+  "sha256": "b793a109cd62ae707e7d3151cc386624aaa8f2912e8ccbe911d9feddf5a9bad5",
+  "sha512": "4ae066f976788859552e4a89fea71c48597b64cc5e6aaa31b3ffbfd016f254ca59145d63cac5ce098604c3374d9d195fb74aaf6f5888f44ffa4a09c93aa24da8",
+  "visibility": "public",
+  "device_info": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+  "location_data": "Istanbul, Türkiye",
+  "origin_ip": "176.42.***.***",
+  "created_at": "2026-01-12T09:52:30.729Z",
+  "verification_url": "https://ilhanart.org/verify?id=POART-FYGRIVEU"
+}
