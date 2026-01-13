@@ -1,4 +1,8 @@
-# Digital Notary Security Verification
+# 🔒 Digital Notary Security Verification
+
+[![PoArt Sealed](https://img.shields.io/badge/PoArt-SEALED-059669?style=for-the-badge&logo=shield&logoColor=white)](https://www.ilhanart.org/verify)
+[![Hash Verified](https://img.shields.io/badge/Hash-VERIFIED-10b981?style=for-the-badge&logo=checkmark&logoColor=white)](https://github.com/Galerilhan/ilhanart-core/tree/main/sealed)
+[![Certificate](https://img.shields.io/badge/Certificate-POART--AMBZQ8RL-047857?style=for-the-badge)](https://www.ilhanart.org/public-registry)
 
 ## 🔐 Current Deployment Status
 
@@ -157,6 +161,7 @@ If hash mismatch → Red banner warning appears.
 
 ---
 
-**Last Updated:** 2026-01-14 01:51 UTC  
+**Last Updated:** 2026-01-14 02:13 UTC  
 **Verified By:** Deniz İlhan (@Galerilhan)  
-**Certificate ID:** POART-T4TBLXMM (v5.0 deployment) | TBD (v5.1 pending)
+**Certificate ID:** POART-AMBZQ8RL (v5.1 deployment)  
+**Previous Certificate:** POART-T4TBLXMM (v5.0 deployment)
