@@ -1,137 +1,106 @@
 # 🎨 İlhanArt Core - PoArt Protocol v1.0
 
 [![Status](https://img.shields.io/badge/Status-SEALED-success?style=for-the-badge)](https://github.com/galeri-coder/ilhanart-core)
-[![Date](https://img.shields.io/badge/Date-January%2012%2C%202025-blue?style=for-the-badge)](https://github.com/galeri-coder/ilhanart-core)
+[![Date](https://img.shields.io/badge/Date-January%2013%2C%202026-blue?style=for-the-badge)](https://github.com/galeri-coder/ilhanart-core)
 [![Architecture](https://img.shields.io/badge/Architecture-Triple--Layer-orange?style=for-the-badge)](https://github.com/galeri-coder/ilhanart-core)
 
 **Civilizational-Scale Code Verification System**
 
-> "Culture > Capital" — Don't Trust, Verify 🔐
+> "Culture > Capital" — Don't Trust, Verify 🔒
 
 ---
 
-## 🔐 Sealed Components
+## 🔐 Official SHA-512 Verification Hashes
 
-### 🎨 Frontend Layer (Digital Notary Interface)
-
-**File:** [`sealed/notary_v1.0_SEALED.html`](sealed/notary_v1.0_SEALED.html)  
-**Certificate:** POART-25BWYT7S  
-**Size:** ~72 KB  
-**Sealed:** January 12, 2025 at 10:50 UTC
+### 1. notary_v1_0_SEALED.html
+**Size:** 59,515 bytes  
+**Description:** Digital Notary Widget - Multilingual (TR/EN/ZH/ES)  
+**Sealed:** January 13, 2026 at 20:40 UTC
 
 **SHA-512:**
 ```
-A3CCF04E4406D4394F17345DD9B5F4010E916ABA868308F0E92A74F67A57C19AB5211BAA69467221BDF9B9A0C7731530B3587130D00B3FB07F4D1706173E40D4
+b1f82a26545166aec43c97cc6c5df74bfd4f2e07850ff30fdd3d81382ea96c5da31502ab3d35aefc0fc4f267849e2495a91fc4cdca7b6f1e32db9df57ed7e2c0
 ```
 
 **Features:**
-- Drag & drop file sealing
+- Multilingual support (Turkish, English, Chinese, Spanish)
+- Three privacy modes: Private, Masked, Public
 - Client-side SHA-512 hashing
-- Privacy modes (Private/Masked/Public)
-- Certificate generation (PNG/JSON/PDF)
+- Certificate generation (PNG, JSON, PDF)
+- Drag & drop file upload
 - QR code verification
 - Supabase integration
 
-**Metadata:** [`sealed/POART-25BWYT7S_Data.json`](sealed/POART-25BWYT7S_Data.json)
-
 ---
 
-### 🗄️ Backend Layer (Database Schema)
-
-**File:** [`sealed/manifests_schema_v1.0_SEALED.sql`](sealed/manifests_schema_v1.0_SEALED.sql)  
-**Certificate:** POART-FYGRIVEU  
-**Size:** ~4 KB  
-**Sealed:** January 12, 2025 at 09:52 UTC
+### 2. manifests_schema_v1_0_SEALED.sql
+**Size:** 3,147 bytes  
+**Description:** Database schema with automatic IP masking and constraints  
+**Sealed:** January 13, 2026
 
 **SHA-512:**
 ```
-4AE066F976788859552E4A89FEA71C48597B64CC5E6AAA31B3FFBFD016F254CA59145D63CAC5CE098604C3374D9D195FB74AAF6F5888F44FFA4A09C93AA24DA8
-```
-
-**Database Structure:**
-```sql
-CREATE TABLE manifests (
-  cert_id           TEXT PRIMARY KEY,
-  title             TEXT NOT NULL,
-  creator           TEXT NOT NULL,
-  sha256            TEXT NOT NULL,
-  sha512            TEXT NOT NULL,
-  visibility        TEXT CHECK(visibility IN ('public', 'private', 'masked')),
-  origin_ip         TEXT,  -- Auto-masked: xxx.xxx.***.***
-  location_data     TEXT,
-  device_info       TEXT,
-  created_at        TIMESTAMP DEFAULT NOW()
-);
+4ae066f976788859552e4a89fea71c48597b64cc5e6aaa31b3ffbfd016f254ca59145d63cac5ce098604c3374d9d195fb74aaf6f5888f44ffa4a09c93aa24da8
 ```
 
 **Security Features:**
-- Automatic IP masking
-- Visibility-based access control
-- SHA-512 length validation
-- Title & creator constraints
-- Immutable timestamps
-
-**Metadata:** [`sealed/POART-FYGRIVEU_Data.json`](sealed/POART-FYGRIVEU_Data.json)
+- Automatic IP masking (xxx.xxx.***.***) 
+- Visibility-based access control (public/private/masked)
+- SHA-512 length validation (128 characters)
+- Title & creator length constraints (1-300 chars)
+- Immutable timestamp recording
 
 ---
 
-## 🔍 How to Verify
+### 3. POART-25BWYT7S_Data.json
+**Size:** 430 bytes  
+**Description:** Example Certificate Data - Reference output format  
 
-### Method 1: Web Interface (Recommended)
+**SHA-512:**
+```
+442ee210aae3b67dde5d2fa93a8bbc97f4b56531253613155e8ee52ff8daf61226fa84e03fd1e3132d7b04930f4494ba59cf3cf853db550369b54d29734c2177
+```
 
-**Perfect for non-technical users:**
+**Certificate Info:**
+- Certificate ID: POART-25BWYT7S
+- Title: NotaryHTML
+- Creator: Deniz İlhan
+- Visibility: Public
+- Location: Istanbul, Türkiye
+- IP: 176.42.***.**** (masked)
+- Created: 2026-01-12
 
-1. Visit **https://ilhanart.org/verify**
-2. Download any file from this repository
-3. Drag & drop to the verification page
-4. ✅ Instant verification result
+**Note:** This is a clean example output without embedded hashes to avoid self-referential paradox.
 
-### Method 2: Terminal (Advanced)
+---
 
-**For developers and security auditors:**
+## ✅ How to Verify Files
 
-#### macOS / Linux:
+### Quick Verification (macOS/Linux):
 ```bash
 # Download file
-curl -O https://raw.githubusercontent.com/galeri-coder/ilhanart-core/main/sealed/notary_v1.0_SEALED.html
+curl -O https://raw.githubusercontent.com/galeri-coder/ilhanart-core/main/sealed/notary_v1_0_SEALED.html
 
-# Calculate hash
-shasum -a 512 notary_v1.0_SEALED.html
+# Calculate SHA-512
+shasum -a 512 notary_v1_0_SEALED.html
 
-# Compare with official hash above
+# Compare with hash above - should match exactly!
 ```
 
-#### Windows (PowerShell):
+**Expected output:**
+```
+b1f82a26545166aec43c97cc6c5df74bfd4f2e07850ff30fdd3d81382ea96c5da31502ab3d35aefc0fc4f267849e2495a91fc4cdca7b6f1e32db9df57ed7e2c0
+```
+
+### Windows PowerShell:
 ```powershell
 # Download file
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/galeri-coder/ilhanart-core/main/sealed/notary_v1.0_SEALED.html" -OutFile "notary_v1.0_SEALED.html"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/galeri-coder/ilhanart-core/main/sealed/notary_v1_0_SEALED.html" -OutFile "notary_v1_0_SEALED.html"
 
-# Calculate hash
-Get-FileHash -Algorithm SHA512 notary_v1.0_SEALED.html
+# Calculate SHA-512
+Get-FileHash -Algorithm SHA512 notary_v1_0_SEALED.html
 
-# Compare with official hash above
-```
-
-### Method 3: Python Script
-```python
-import hashlib
-import requests
-
-# Download and verify
-url = "https://raw.githubusercontent.com/galeri-coder/ilhanart-core/main/sealed/notary_v1.0_SEALED.html"
-response = requests.get(url)
-
-# Calculate hash
-sha512 = hashlib.sha512(response.content).hexdigest()
-
-# Expected hash
-expected = "a3ccf04e4406d4394f17345dd9b5f4010e916aba868308f0e92a74f67a57c19ab5211baa69467221bdf9b9a0c7731530b3587130d00b3fb07f4d1706173e40d4"
-
-# Verify
-if sha512 == expected:
-    print("✅ VERIFIED: File is authentic!")
-else:
-    print("❌ FAILED: File has been modified!")
+# Compare with hash above
 ```
 
 ---
@@ -142,192 +111,91 @@ else:
 - File is **original and unmodified**
 - Safe to use in production
 - Cryptographically guaranteed integrity
+- Zero tampering detected
 
 ### ❌ If Hash Doesn't Match:
 - **DO NOT USE THE FILE**
 - File has been tampered with or corrupted
 - Download fresh copy from this repository
-- Report the incident
+- Report the incident immediately
 
-### 🔒 Hash Properties:
-- **Algorithm:** SHA-512 (NIST FIPS 180-4)
-- **Length:** 128 hexadecimal characters
-- **Collision Resistance:** Computationally infeasible
+### 🔒 Why SHA-512?
+- **Algorithm:** NIST FIPS 180-4 standard
+- **Length:** 128 hexadecimal characters (512 bits)
+- **Collision Resistance:** 2^256 operations (computationally infeasible)
 - **One-Way Function:** Cannot reverse hash to original
-- **Avalanche Effect:** Single bit change completely alters hash
+- **Avalanche Effect:** Single bit change → completely different hash
+- **No Self-Reference:** Files don't contain their own hashes
 
 ---
 
-## 🌐 Production Deployment
+## 📦 Repository Structure
 
-### Live System
-- **Website:** https://ilhanart.org
-- **Digital Notary:** https://ilhanart.org/notary
-- **Verification Page:** https://ilhanart.org/verify
-
-### System Architecture
 ```
-┌─────────────────────────────────────────┐
-│         Frontend (Sealed HTML)          │
-│  • User Interface                       │
-│  • Client-side Hashing                  │
-│  • Certificate Generation               │
-└─────────────┬───────────────────────────┘
-              │
-              ↓
-┌─────────────────────────────────────────┐
-│       Backend (Sealed SQL + API)        │
-│  • Supabase Database                    │
-│  • Manifest Storage                     │
-│  • IP Masking                           │
-│  • Visibility Control                   │
-└─────────────┬───────────────────────────┘
-              │
-              ↓
-┌─────────────────────────────────────────┐
-│      Verification (Triple-Layer)        │
-│  • Frontend Integrity Check             │
-│  • Backend Schema Validation            │
-│  • Certificate Metadata Proof           │
-└─────────────────────────────────────────┘
+ilhanart-core/sealed/
+├── notary_v1_0_SEALED.html          # Digital Notary Widget (59.5 KB)
+├── manifests_schema_v1_0_SEALED.sql  # Database Schema (3.1 KB)
+├── POART-25BWYT7S_Data.json          # Example Certificate (430 bytes)
+└── README.md                          # This file (with verification hashes)
 ```
 
----
-
-## 🎯 What Each Layer Does
-
-### Frontend (HTML)
-**Purpose:** User-facing digital notary interface
-
-**Capabilities:**
-- Upload and seal files
-- Generate cryptographic hashes
-- Create verifiable certificates
-- QR code generation for mobile verification
-- Privacy control (3 visibility modes)
-- Real-time Supabase integration
-
-**Security:**
-- All hashing done client-side
-- No file upload to server
-- Zero-knowledge proof system
+**Critical Note:** Only these 3 files are cryptographically sealed. README.md contains their hashes for verification but is not itself sealed (to avoid self-referential paradox). This is standard cryptographic practice.
 
 ---
 
-### Backend (SQL)
-**Purpose:** Immutable manifest storage
-
-**Capabilities:**
-- Store sealed file manifests
-- Automatic IP masking (xxx.xxx.***.***) 
-- Visibility-based access control
-- Timestamp recording (immutable)
-- Certificate ID generation
-
-**Constraints:**
-- SHA-512 length validation (128 chars)
-- Title length: 1-300 characters
-- Creator length: 1-300 characters
-- Visibility enum: public/private/masked
-- No NULL values for critical fields
-
----
-
-### Certificate Data (JSON)
-**Purpose:** Metadata transparency
-
-**Contents:**
-```json
-{
-  "cert_id": "POART-25BWYT7S",
-  "title": "NotaryHTML",
-  "creator": "Deniz İlhan",
-  "sha256": "08c913d1864ed38bbf9437b47430aea9...",
-  "sha512": "a3ccf04e4406d4394f17345dd9b5f401...",
-  "visibility": "public",
-  "location_data": "Istanbul, Türkiye",
-  "origin_ip": "176.42.***.***",
-  "created_at": "2026-01-12T10:50:27.277Z",
-  "verification_url": "https://ilhanart.org/verify?id=POART-25BWYT7S"
-}
-```
-
----
-
-## 📜 PoArt Protocol Philosophy
+## 🎯 PoArt Protocol Philosophy
 
 ### Core Principles
 
 **"Culture > Capital"**  
-Art and cultural heritage should be preserved through cryptographic proof, not financial speculation.
+Art and cultural heritage preservation through cryptographic proof, not financial speculation.
 
 **"Don't Trust, Verify"**  
-Every claim is verifiable through mathematics, not authority or reputation.
+Every claim is mathematically verifiable. No authority. No reputation. Just mathematics.
 
-**Civilizational-Scale Timeline**  
+**Civilizational Timeline**  
 975-year roadmap (2025-3000) for long-term cultural preservation.
 
-### Anti-Speculation Philosophy
+### Anti-Speculation Design
 - 365-day continuous cold wallet storage requirement
 - No trading or speculation mechanisms
-- Focus on authentication and provenance
-- Mathematical governance over human governance
+- Focus on authentication and provenance only
+- Mathematical governance over social governance
+- Zero financial incentives for short-term behavior
+
+---
+
+## 🌍 Live System
+
+- **Gallery Website:** https://ilhanart.org
+- **Digital Notary:** https://ilhanart.org/notary
+- **Public Registry:** https://www.ilhanart.org/public-registry
+- **GitHub Repository:** https://github.com/galeri-coder/ilhanart-core
+- **Location:** Ortaköy, Istanbul, Turkey
 
 ---
 
 ## 🛠️ Technical Specifications
 
 ### Cryptographic Standards
-- **Hash Algorithm:** SHA-512
+- **Hash Algorithm:** SHA-512 (NIST FIPS 180-4)
 - **Encoding:** UTF-8
-- **Line Endings:** LF (Unix-style)
-- **File Integrity:** Byte-perfect verification
+- **Line Endings:** LF (Unix-style, normalized by Git)
+- **Verification:** Byte-perfect integrity check
+- **Self-Reference:** None (prevents circular paradox)
 
-### Browser Compatibility
+### Browser Compatibility (Digital Notary)
 - ✅ Chrome 37+ (crypto.subtle API)
 - ✅ Firefox 34+
 - ✅ Safari 11+
 - ✅ Edge 79+
-- ❌ IE 11 (no support)
+- ❌ IE 11 (not supported)
 
-### Dependencies
-- Supabase JS SDK v2+
-- QRCode.js (for QR generation)
-- jsPDF (for PDF certificates)
-- html2canvas (for PNG screenshots)
-
----
-
-## 📦 Repository Structure
-```
-ilhanart-core/
-├── sealed/                              # Cryptographically sealed files
-│   ├── notary_v1.0_SEALED.html         # Frontend (72 KB)
-│   ├── manifests_schema_v1.0_SEALED.sql # Backend (4 KB)
-│   ├── POART-25BWYT7S_Data.json        # Frontend metadata (441 bytes)
-│   └── POART-FYGRIVEU_Data.json        # Backend metadata (439 bytes)
-├── README.md                            # This file
-└── LICENSE                              # Project license (to be added)
-```
-
----
-
-## 🔗 Related Links
-
-### Official Resources
-- **İlhanArt Gallery:** https://ilhanart.org
-- **Digital Notary System:** https://ilhanart.org/notary
-- **Verification Portal:** https://ilhanart.org/verify
-- **GitHub Organization:** https://github.com/galeri-coder
-
-### Protocol Documentation
-- **PoArt Protocol Overview:** Coming soon
-- **Founding Patrons Protocol:** In development
-- **Technical Whitepaper:** In development
-
-### Social Media
-- **Twitter/X:** [@Galerilhan](https://twitter.com/Galerilhan)
-- **Location:** Ortaköy, Istanbul, Turkey
+### JavaScript Dependencies
+- Supabase JS SDK v2+ (database integration)
+- QRCode.js (QR code generation)
+- jsPDF 2.5.1 (PDF certificates)
+- html2canvas 1.4.1 (PNG screenshots)
 
 ---
 
@@ -337,13 +205,22 @@ ilhanart-core/
 Open an issue in this repository with:
 - File you're trying to verify
 - Hash you calculated
-- Expected hash
+- Expected hash from this README
 - Your operating system
+- Command you used
+
+### Security Reports
+If you find a file with mismatched hash:
+1. **Do not use the file**
+2. Open a GitHub issue immediately
+3. Include: filename, calculated hash, download source
+4. We will investigate within 24 hours
 
 ### Business Inquiries
 **İlhanArt Gallery**  
 Ortaköy, Istanbul, Turkey  
-Contact via website: https://ilhanart.org
+Website: https://ilhanart.org  
+Twitter/X: [@Galerilhan](https://twitter.com/Galerilhan)
 
 ---
 
@@ -353,97 +230,96 @@ This codebase demonstrates:
 - Client-side cryptographic hashing
 - Zero-knowledge proof systems
 - Immutable database constraints
-- Privacy-preserving design
+- Privacy-preserving design (IP masking)
 - Trust-minimized architecture
+- Self-referential paradox avoidance
 
-**Feel free to use for educational purposes with attribution.**
+**Free to use for educational purposes with attribution.**
 
 ---
 
 ## ⚡ Quick Start
+
 ```bash
 # Clone repository
 git clone https://github.com/galeri-coder/ilhanart-core.git
 cd ilhanart-core/sealed
 
-# Verify HTML
-shasum -a 512 notary_v1.0_SEALED.html
+# Verify all sealed files
+shasum -a 512 notary_v1_0_SEALED.html
+shasum -a 512 manifests_schema_v1_0_SEALED.sql
+shasum -a 512 POART-25BWYT7S_Data.json
 
-# Verify SQL
-shasum -a 512 manifests_schema_v1.0_SEALED.sql
-
-# Compare with official hashes in this README
+# Compare output with hashes in this README
+# All 3 must match exactly!
 ```
 
 ---
 
-## 🏆 Version History
+## 📜 License
 
-### v1.0 (January 12, 2025) - SEALED
-- ✅ Initial triple-layer deployment
-- ✅ Frontend sealed: POART-25BWYT7S
-- ✅ Backend sealed: POART-FYGRIVEU
-- ✅ SHA-512 cryptographic sealing
-- ✅ Public verification system live
-- ✅ GitHub transparency achieved
+**PoArt Protocol - Civilizational Scale Verification**
 
-**Status:** IMMUTABLE - No further changes to v1.0 sealed files
-
----
-
-## 📄 License
-
-PoArt Protocol - Civilizational Scale Verification
-
-**Copyright © 2025 İlhanArt Gallery**  
+Copyright © 2026 İlhanArt Gallery  
 All rights reserved.
 
-Sealed code is provided for verification purposes.  
-Derivative works require attribution.
+Sealed code provided for verification purposes.  
+Derivative works require attribution.  
+Commercial use requires permission.
 
 ---
 
 ## 🔮 Roadmap
 
-### Phase 1: Foundation (2025) ✅
+### Phase 1: Foundation (2025-2026) ✅
 - [x] Digital notary system
-- [x] Triple-layer sealing
-- [x] Public verification
+- [x] Triple-layer cryptographic sealing
+- [x] Public verification system
 - [x] GitHub transparency
+- [x] Self-paradox elimination
 
-### Phase 2: Expansion (2026)
+### Phase 2: Expansion (2026-2027)
 - [ ] Blockchain integration (Ethereum/Polygon)
 - [ ] IPFS decentralized storage
 - [ ] Multi-signature verification
 - [ ] Mobile app development
+- [ ] API for third-party integration
 
 ### Phase 3: Ecosystem (2027-2030)
 - [ ] Gallery network integration
 - [ ] Artist collective platform
 - [ ] Provenance tracking system
 - [ ] International expansion
+- [ ] Museum partnerships
 
 ### Phase 4: Civilization (2031-3000)
 - [ ] 975-year protocol maintenance
 - [ ] Generational knowledge transfer
 - [ ] Cultural heritage preservation
 - [ ] Long-term governance model
+- [ ] Archive replication network
 
 ---
 
 <div align="center">
 
-### 🔐 Remember
+### 🔒 Mathematical Proof, Not Trust
 
-**Every file is sealed. Every claim is verifiable. Every hash is mathematical proof.**
+**Every file is sealed.**  
+**Every claim is verifiable.**  
+**Every hash is mathematical proof.**
+
+**No authority. No reputation. No trust.**  
+**Only pure mathematics.**
 
 **"Don't Trust, Verify"**
 
 ---
 
 **Built with 💚 by İlhanArt Gallery**  
-**Istanbul, Turkey • 2025**
+**Ortaköy, Istanbul, Turkey • 2026**
 
-[![Verify](https://img.shields.io/badge/Verify-ilhanart.org%2Fverify-success?style=for-the-badge)](https://ilhanart.org/verify)
+[![Verify Now](https://img.shields.io/badge/Verify-Now-success?style=for-the-badge)](https://www.ilhanart.org/public-registry)
+[![GitHub](https://img.shields.io/badge/GitHub-Source-black?style=for-the-badge&logo=github)](https://github.com/galeri-coder/ilhanart-core)
 
 </div>
