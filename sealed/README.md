@@ -2,9 +2,9 @@
 
 ## 🔐 Current Deployment Status
 
-### **Version:** v5.0 (2026-01-14)
+### **Version:** v5.1 (2026-01-14)
 
-**File:** `index.html` (Digital Notary Application with Security Badge)
+**File:** `index.html` (Digital Notary Application - Security Link Fix)
 
 **GitHub Repository:** [galeri-coder/galeri-coder.github.io](https://github.com/galeri-coder/galeri-coder.github.io)
 
@@ -16,35 +16,30 @@
 
 ### **SHA-256:**
 ```
-c016bd04b6eb8e917e3f66423ef5acaab222cc1dc723449e5a5533014aafe897
+578e5118d58efda7e4cbcf9997a9f2d0589cf2a40fa778f0fe4fd51c8264fcf6
 ```
 
 ### **SHA-512:**
 ```
-075995578ae628d6336ca3859a9c71788a3da6180ddef0ef2f4282aaa6277c86
-b8f8ed4cfd43e8b0ec1dcf1b212cb8efa147df677969e8554e75eaa9430ed570
+315fca4d35c8e917eaa79fc0d9134e37dd1a14a506b38764c129958433e6fc75
+0ef558397a0f199f18cb63232e4eb46ff7db2904bbc4874d62d38180f7dac3f8
 ```
 
 ---
 
-## 🆕 Version 5.0 Changes (2026-01-14)
+## 🆕 Version 5.1 Changes (2026-01-14)
 
 ### **Bug Fixes:**
-- ✅ Fixed file selection dialog not appearing on first click
-- ✅ Fixed element targeting (migrated from ID-based to class-based selection)
-- ✅ Fixed language-specific element initialization
+- ✅ Fixed security verification link: `/security-verification` → `/verify`
+- ✅ Updated all internal navigation links
+- ✅ Corrected security badge URL
 
-### **New Features:**
+### **Previous Features (v5.0):**
 - 🌍 Complete 4-language support (Turkish, English, Chinese, Spanish)
 - 🔐 Integrated security verification badge
 - 📱 Enhanced mobile responsiveness
-- ⚡ Improved language-aware container activation
-
-### **Technical Improvements:**
-- Class-based element selection (`.photo-drop`, `.art-drop`, etc.)
-- Dynamic language container detection
-- Unique radio button names per language (`visibility-tr`, `visibility-en`, etc.)
-- Browser-side hash calculation (SHA-256, SHA-512)
+- ⚡ Class-based element selection
+- 🐛 Fixed file selection dialog bug
 
 ---
 
@@ -57,11 +52,11 @@ curl -s https://raw.githubusercontent.com/galeri-coder/galeri-coder.github.io/ma
 
 **Expected Output:**
 ```
-c016bd04b6eb8e917e3f66423ef5acaab222cc1dc723449e5a5533014aafe897
+578e5118d58efda7e4cbcf9997a9f2d0589cf2a40fa778f0fe4fd51c8264fcf6
 ```
 
 ### **Method 2: Browser Console**
-1. Visit https://www.ilhanart.org/digital-notary
+1. Visit https://www.ilhanart.org/notary
 2. Open Developer Tools (F12)
 3. Console → Type:
 ```javascript
@@ -80,7 +75,7 @@ fetch('https://raw.githubusercontent.com/galeri-coder/galeri-coder.github.io/mai
 ### **Method 3: Squarespace Loader Verification**
 The Squarespace Footer Loader automatically verifies the hash on every page load:
 ```javascript
-const expectedHash = "c016bd04b6eb8e917e3f66423ef5acaab222cc1dc723449e5a5533014aafe897";
+const expectedHash = "578e5118d58efda7e4cbcf9997a9f2d0589cf2a40fa778f0fe4fd51c8264fcf6";
 ```
 
 If hash mismatch → Red banner warning appears.
@@ -94,15 +89,15 @@ If hash mismatch → Red banner warning appears.
 │  GITHUB REPOSITORY (Source of Truth)       │
 │  galeri-coder/galeri-coder.github.io       │
 │                                             │
-│  File: index.html (v5.0)                   │
-│  Hash: c016bd04...aafe897                  │
+│  File: index.html (v5.1)                   │
+│  Hash: 578e5118...64fcf6                   │
 └──────────────────┬──────────────────────────┘
                    │
                    │ CDN Delivery (Raw)
                    ▼
 ┌─────────────────────────────────────────────┐
 │  SQUARESPACE WEBSITE                        │
-│  www.ilhanart.org/digital-notary            │
+│  www.ilhanart.org/notary                    │
 │                                             │
 │  Footer Loader:                             │
 │  1. Fetches index.html from GitHub         │
@@ -139,6 +134,7 @@ If hash mismatch → Red banner warning appears.
 
 | Version | Date | Hash (SHA-256) | Changes |
 |---------|------|----------------|---------|
+| v5.1 | 2026-01-14 | `578e5118...64fcf6` | Security link fix (/verify) |
 | v5.0 | 2026-01-14 | `c016bd04...aafe897` | File selection fix + 4 languages |
 | v4.5 | 2026-01-13 | `[previous]` | Multilingual edition (TR/EN) |
 | v4.0 | 2026-01-12 | `[previous]` | Security badge integration |
@@ -147,7 +143,7 @@ If hash mismatch → Red banner warning appears.
 
 ## 🔗 Related Documentation
 
-- **Security Verification Guide:** `/security-verification`
+- **Security Verification Guide:** https://www.ilhanart.org/verify
 - **Public Registry:** https://www.ilhanart.org/public-registry
 - **PoArt Protocol:** https://www.ilhanart.org/poart-protocol
 
@@ -161,6 +157,6 @@ If hash mismatch → Red banner warning appears.
 
 ---
 
-**Last Updated:** 2026-01-14 01:16 UTC  
+**Last Updated:** 2026-01-14 01:51 UTC  
 **Verified By:** Deniz İlhan (@Galerilhan)  
-**Certificate ID:** POART-XS9ZWEPP (v5.0 test deployment)
+**Certificate ID:** POART-T4TBLXMM (v5.0 deployment) | TBD (v5.1 pending)
