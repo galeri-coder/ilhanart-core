@@ -1551,7 +1551,7 @@
                 }
 
                 // Generate QR
-                const qrDataUrl = await generateQR(`https://ilhanart.org/verify?id=${record.cert_id}`);
+                const qrDataUrl = await generateQR(`https://www.ilhanart.org/public-registry}`);
 
                 // Generate certificate HTML
                 setStatus("📜 Sertifika oluşturuluyor...", "info");
@@ -1602,7 +1602,7 @@
             if (!currentRecord) return;
             const jsonData = {
                 ...currentRecord,
-                verification_url: `https://ilhanart.org/verify?id=${currentRecord.cert_id}`
+                verification_url: `https://www.ilhanart.org/public-registry}`
             };
             const blob = new Blob([JSON.stringify(jsonData, null, 2)], { type: "application/json" });
             const link = document.createElement("a");
@@ -1685,4 +1685,5 @@
   50% { opacity: 1; }
 }
 </style>
+
 </script>
