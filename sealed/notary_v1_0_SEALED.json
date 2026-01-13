@@ -1,0 +1,32 @@
+{
+  "seal_id": "POART-NOTARY-HTML-V1.0",
+  "filename": "notary_v1_0_SEALED.html",
+  "description": "PoArt Protocol Digital Notary Widget - Multilingual (TR/EN/ZH/ES) - Production Version",
+  "version": "1.0.0",
+  "file_size_bytes": 59506,
+  "sha256": "8418f27d4887d1f31926369cd8ded0614a65757d0808869886ac9475a30978a0",
+  "sha512": "8a5e5ec1678ad5790bfd9773792722c667256e4f8bfa1e863fdd038e6ccbfcc886500fbfeb762b4060a94880a4d7018ecd312b2a8b43f2c004990ec5107ef0dc",
+  "sealed_by": "Deniz İlhan",
+  "sealed_at": "2026-01-13T20:10:00.000Z",
+  "integrity_status": "SEALED",
+  "verification_url": "https://www.ilhanart.org/public-registry",
+  "features": [
+    "Multilingual support (Turkish, English, Chinese, Spanish)",
+    "Three privacy modes: Private, Masked, Public",
+    "Supabase integration for manifest storage",
+    "SHA-256 and SHA-512 hash calculation",
+    "Certificate generation with QR code",
+    "Download options: PNG, JSON, PDF",
+    "IP masking for privacy protection",
+    "Drag-and-drop file upload"
+  ],
+  "dependencies": {
+    "jsPDF": "2.5.1",
+    "qrcode": "1.5.1",
+    "supabase-js": "2",
+    "html2canvas": "1.4.1"
+  },
+  "deployment_target": "Squarespace + Wetlog (CSS-based multilingual system)",
+  "repository": "ilhanart-core/sealed/",
+  "lock_emoji": "🔒"
+}

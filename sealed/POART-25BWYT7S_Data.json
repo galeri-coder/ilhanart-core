@@ -1,0 +1,13 @@
+{
+  "cert_id": "POART-25BWYT7S",
+  "title": "NotaryHTML",
+  "creator": "Denizİlhan",
+  "sha256": "08c913d1864ed38bbf9437b47430aea9a4a9ec51ff5497a58725ff9cca1e6222",
+  "sha512": "a3ccf04e4406d4394f17345dd9b5f4010e916aba868308f0e92a74f67a57c19ab5211baa69467221bdf9b9a0c7731530b3587130d00b3fb07f4d1706173e40d4",
+  "visibility": "public",
+  "device_info": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+  "location_data": "Istanbul, Türkiye",
+  "origin_ip": "176.42.***.***",
+  "created_at": "2026-01-12T10:50:27.277Z",
+  "verification_url": "https://www.ilhanart.org/public-registry"
+}
