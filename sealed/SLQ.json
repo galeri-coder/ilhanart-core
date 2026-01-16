@@ -1,0 +1,13 @@
+{
+  "cert_id": "POART-TO8NLF3A",
+  "title": "SLQ",
+  "creator": "denizilhan",
+  "sha256": "68b75312bac5b0ed26d16447e180e27d86e1e6bff52ad3a7ce39ab6f974b5605",
+  "sha512": "417b363c4bc5792bbbd3105e332ab2a931d34517e847fa1c8e76bbd9041e1478a2869b1b5865d3eecb0f03f0741dce6fd4d9f2a4ceedf19df039b350799881d7",
+  "visibility": "public",
+  "device_info": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+  "location_data": "Istanbul, Türkiye",
+  "origin_ip": "46.1.***.***",
+  "created_at": "2026-01-16T22:31:18.745Z",
+  "verification_url": "https://www.ilhanart.org/public-registry"
+}
