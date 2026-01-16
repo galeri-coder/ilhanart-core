@@ -102,3 +102,15 @@ SET origin_ip =
 WHERE origin_ip IS NOT NULL 
   AND origin_ip NOT LIKE '%***%'
   AND origin_ip LIKE '%.%.%.%'; -- Sadece IPv4 formatına uyanları maskele (Hata önlemek için)
+  -- Mevcut okuma politikalarını temizle (Eğer varsa hata vermesin)
+DROP POLICY IF EXISTS "Public ve Masked Olanları Okuma İzni" ON public.manifests;
+
+-- YENİ AKILLI KURAL:
+-- Sadece 'public' veya 'masked' olanları okumaya izin ver.
+-- 'private' olanlar bu filtreden geçemez ve GÖRÜNMEZ.
+
+CREATE POLICY "Public ve Masked Olanları Okuma İzni"
+ON public.manifests
+FOR SELECT
+TO anon
+USING (visibility IN ('public', 'masked'));
