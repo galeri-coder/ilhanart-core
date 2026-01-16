@@ -2,13 +2,13 @@
 
 [![PoArt Sealed](https://img.shields.io/badge/PoArt-SEALED-059669?style=for-the-badge&logo=shield&logoColor=white)](https://www.ilhanart.org/verify)
 [![Hash Verified](https://img.shields.io/badge/Hash-VERIFIED-10b981?style=for-the-badge&logo=checkmark&logoColor=white)](https://github.com/galeri-coder/ilhanart-core/tree/main/sealed)
-[![Certificate](https://img.shields.io/badge/Certificate-POART--AMBZQ8RL-047857?style=for-the-badge)](https://www.ilhanart.org/public-registry)
+[![Certificate](https://img.shields.io/badge/Certificate-POART--NNLH33XP-047857?style=for-the-badge)](https://www.ilhanart.org/public-registry)
 
 ## 🔐 Current Deployment Status
 
-### **Version:** v5.3 (2026-01-14)
+### **Version:** v5.4 (2026-01-16)
 
-**File:** `index.html` (Digital Notary Application - Security Badge Removed)
+**File:** `index.html` (Digital Notary Application - Production Build)
 
 **GitHub Repository:** [galeri-coder/galeri-coder.github.io](https://github.com/galeri-coder/galeri-coder.github.io)
 
@@ -20,24 +20,24 @@
 
 ### **SHA-256:**
 ```
-093743d5f1a969e0b3f934f9ee1b661131a3336522aaa6631c1123f6a73d2d79
+359996cd75f5aa9f096688ef72cf81573cfeeb9e4f5ff48a78de61823128a376
 ```
 
 ### **SHA-512:**
 ```
-081963fa2d89371cc15692fc25c7a04db17a5cb15b9b72b43a226e94bf96ae47
-2518bd9dd1859623d370388cef2fd5f09fb183cc9687f9d86a995e2ae9e79446
+18c3894807af96045b8ac1591e9ecb87a7d5957801c5aed70ed79eada35edd4a
+66413a5c2f7f7e81d9b54933d854836ec3ad23a334e5c6c7ab35e31849fccc96
 ```
 
 ---
 
-## 🆕 Version 5.3 Changes (2026-01-14)
+## 🆕 Version 5.4 Changes (2026-01-16)
 
-### **Major Changes:**
-- ❌ **REMOVED:** Security badge section ("3 Katmanlı Güvenlik Sistemi")
-- ❌ **REMOVED:** Security badge HTML/CSS code
-- ❌ **REMOVED:** Link to `/security-verification`
-- ✅ **CLEAN:** Minimal interface without external badge component
+### **Major Updates:**
+- ✅ **UPDATED:** Production-ready build
+- ✅ **VERIFIED:** Certificate POART-NNLH33XP generated
+- ✅ **TESTED:** All 4 languages operational
+- ✅ **STABLE:** Hash verification system active
 
 ### **Preserved Features:**
 - 🌍 4-language support (Turkish, English, Chinese, Spanish)
@@ -60,7 +60,7 @@ curl -s https://raw.githubusercontent.com/galeri-coder/galeri-coder.github.io/ma
 
 **Expected Output:**
 ```
-093743d5f1a969e0b3f934f9ee1b661131a3336522aaa6631c1123f6a73d2d79
+359996cd75f5aa9f096688ef72cf81573cfeeb9e4f5ff48a78de61823128a376
 ```
 
 ### **Method 2: Browser Console**
@@ -83,7 +83,7 @@ fetch('https://raw.githubusercontent.com/galeri-coder/galeri-coder.github.io/mai
 ### **Method 3: Squarespace Loader Verification**
 The Squarespace Footer Loader automatically verifies the hash on every page load:
 ```javascript
-const expectedHash = "093743d5f1a969e0b3f934f9ee1b661131a3336522aaa6631c1123f6a73d2d79";
+const expectedHash = "359996cd75f5aa9f096688ef72cf81573cfeeb9e4f5ff48a78de61823128a376";
 ```
 
 If hash mismatch → Red banner warning appears.
@@ -97,8 +97,8 @@ If hash mismatch → Red banner warning appears.
 │  GITHUB REPOSITORY (Source of Truth)       │
 │  galeri-coder/galeri-coder.github.io       │
 │                                             │
-│  File: index.html (v5.3)                   │
-│  Hash: 093743d5...3d2d79                   │
+│  File: index.html (v5.4)                   │
+│  Hash: 359996cd...28a376                   │
 └──────────────────┬──────────────────────────┘
                    │
                    │ CDN Delivery (Raw)
@@ -142,11 +142,11 @@ If hash mismatch → Red banner warning appears.
 
 | Version | Date       | Hash (SHA-256 - 16 chars) | Changes                          |
 |---------|------------|---------------------------|----------------------------------|
-| v5.3    | 2026-01-14 | `093743d5f1a969e0`        | **Security badge removed**       |
+| v5.4    | 2026-01-16 | `359996cd75f5aa9f`        | **Production build verified**    |
+| v5.3    | 2026-01-14 | `093743d5f1a969e0`        | Security badge removed           |
 | v5.2    | 2026-01-14 | `015189d972980cd8`        | Security link fix (/verify)      |
 | v5.1    | 2026-01-14 | `578e5118d58efda7`        | File selection fix + 4 languages |
 | v5.0    | 2026-01-14 | `c016bd04b6eb8e91`        | Multilingual edition (4 langs)   |
-| v4.5    | 2026-01-13 | `[previous]`              | Security badge integration       |
 
 ---
 
@@ -178,10 +178,11 @@ If hash mismatch → Red banner warning appears.
 
 ---
 
-**Last Updated:** 2026-01-14 04:45 UTC  
+**Last Updated:** 2026-01-16 15:43 UTC  
 **Verified By:** Deniz İlhan (@Galerilhan)  
-**Certificate ID:** POART-0KTUIYXE (v5.3 deployment verification)  
+**Certificate ID:** POART-NNLH33XP (v5.4 deployment verification)  
 **Previous Certificates:**
+- POART-0KTUIYXE (v5.3 deployment)
 - POART-AMBZQ8RL (v5.1 deployment)
 - POART-T4TBLXMM (v5.0 deployment)
 
@@ -189,7 +190,7 @@ If hash mismatch → Red banner warning appears.
 
 ## ⚠️ Important Notes
 
-1. **Security Badge Removed:** v5.3 intentionally removes the security badge component for cleaner interface
+1. **Production Ready:** v5.4 is the current stable release
 2. **Hash Changes:** Any modification to index.html will change the hash and trigger verification failure
 3. **Supabase:** Public anon key embedded (safe for client-side use)
 4. **Browser Processing:** All hash calculations done client-side, files never uploaded
@@ -220,6 +221,7 @@ If hash mismatch → Red banner warning appears.
 
 ---
 
-**Status:** ✅ Production Ready (v5.3)  
+**Status:** ✅ Production Ready (v5.4)  
 **Deployment:** GitHub → Squarespace Footer Loader  
-**Hash Verification:** Automatic on page load
+**Hash Verification:** Automatic on page load  
+**Certificate:** POART-NNLH33XP (Istanbul, Türkiye)
